@@ -4,19 +4,20 @@ import { Component } from '@angular/core';
   selector: 'app-test',
   imports: [],
   template: `<h1>
-  Welcome to {{name}} Leaning Angular!
-  <span>{{2 + 2}}</span>
+  Welcome to {{name}} Leanring Angular!
   </h1>
-  <h2>{{"Welcome to "+ name +" learning portingjsajfiasdjlk"}}
-  <h1>name length: {{name.length}}</h1>
-  <h1>{{greetUser()}}</h1>
-  <h1>{{url}}</h1>
+  <input [id]="myId" type="text" value="VVM" />
+  <input bind-disabled="isDisabled" id="{{myId}}" type="text" value="VVM" />
+
+  
   `,
   styles: []
 })
 export class Test {
 public name  = 'Vedamanikanta';
 public url = window.location.href ;
+public myId = "testId";
+public isDisabled = false;
 greetUser(){
   return "Hi " + this.name;
 };
