@@ -1,8 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-test',
-  imports: [],
+  imports: [CommonModule],
   template: `<h1>
     Welcome to {{name}} Leanring Angular!
   </h1>
@@ -12,6 +13,12 @@ import { Component } from '@angular/core';
 <h1 [class]="successClass">veda learning</h1>
 <h1 [class.text-danger]="hasError">veda learning</h1>
   <h2 [class]="messageClasses">Anular 2025</h2>
+
+  <h1>---style binding---</h1>
+  <h2 [style.color]="hasError?'red':'green'">Style Binding</h2>
+  <h2 [style.color]="highlightColor">Style binding2</h2>
+  <h2 [ngStyle]="titleStyles">Style</h2>
+  <h1>------style binding end-------</h1>
   `,
   styles: [`
     .text-success {
@@ -42,6 +49,14 @@ public messageClasses = {
 };
 // class binding end
 
+//stylesbinding
+public highlightColor = "orange";
+//stylesbinding end
+
+public titleStyles = {
+  color: "blue",
+  fontStyle: "italic"
+}
 greetUser(){
   return "Hi " + this.name;
 };
