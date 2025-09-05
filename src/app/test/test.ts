@@ -19,6 +19,7 @@ import { Component } from '@angular/core';
   <h2 [style.color]="highlightColor">Style binding2</h2>
   <h2 [ngStyle]="titleStyles">Style</h2>
   <h1>------style binding end-------</h1>
+  <p>This is the learning project of vedamanikanta</p>
   `,
   styles: [`
     .text-success {
