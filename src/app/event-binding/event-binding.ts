@@ -20,7 +20,6 @@ export class EventBinding {
     setInterval(() => {
       this.greeting = this.greeting +1;
     },1000)
-    fetch("https://jsonplaceholder.typicode.com/posts").then(res=>res.json()).then(data=>console.log(data));
   }
 
 }
