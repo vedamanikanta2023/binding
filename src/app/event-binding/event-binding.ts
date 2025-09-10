@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   <button (click)="onClick($event)">Greet</button>
   <button (click)="greeting2='Welcome VVM'">Greet</button>
   <input #myInput type="text" />
-  <button (click)="logTemplateVariable(myInput.value)">Log</button>
+  <button (click)="logTemplateVariable(myInput)">Log</button>
   `,
   styles: []
 })
@@ -26,6 +26,7 @@ export class EventBinding {
 
   logTemplateVariable(value:any){
     console.log(value);
+    console.log(value.value);
   }
 
 }
