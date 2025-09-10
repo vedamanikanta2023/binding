@@ -4,10 +4,12 @@ import { Component } from '@angular/core';
   selector: 'app-event-binding',
   imports: [],
   template: `<h1>Hello  
-{{greeting}}
+  {{greeting}}
   </h1>
   <button (click)="onClick($event)">Greet</button>
   <button (click)="greeting2='Welcome VVM'">Greet</button>
+  <input #myInput type="text" />
+  <button (click)="logTemplateVariable(myInput.value)">Log</button>
   `,
   styles: []
 })
@@ -20,6 +22,10 @@ export class EventBinding {
     setInterval(() => {
       this.greeting = this.greeting +1;
     },1000)
+  }
+
+  logTemplateVariable(value:any){
+    console.log(value);
   }
 
 }
